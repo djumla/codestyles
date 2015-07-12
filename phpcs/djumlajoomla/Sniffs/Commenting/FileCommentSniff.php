@@ -775,13 +775,6 @@ class djumlajoomla_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer
             if (empty($content) === true) {
                 $error = 'Content missing for @version tag in file comment';
                 $this->currentFile->addError($error, $errorPos, 'EmptyVersion');
-            } else if (strstr($content, 'CVS:') === false
-                && strstr($content, 'SVN:') === false
-                && strstr($content, 'Id:') === false
-            ) {
-                $error = 'Invalid version "%s" in file comment; consider "CVS: <cvs_id>" or "SVN: <svn_id>" instead';
-                $data  = array($content);
-                $this->currentFile->addWarning($error, $errorPos, 'InvalidVersion', $data);
             }
         }
 
