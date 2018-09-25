@@ -1,3 +1,0 @@
-djumlalaravel Coding Standards
-=======================
-
